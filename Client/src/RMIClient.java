@@ -23,8 +23,10 @@ public class RMIClient {
             Registry reg = LocateRegistry.getRegistry("127.0.0.1", 1099);
             RMI rmi = (RMI) reg.lookup("server");
             System.out.println("Connected to server");
-            String text = rmi.getData("Jon");
-            System.out.println(text);
+            Catalog cata = rmi.getCatalog();
+            cata.print();
+            //System.out.println(text)
+            //System.out.println(text);
         }catch(Exception e){
             System.out.println(e);
         }

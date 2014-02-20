@@ -14,4 +14,10 @@ import java.rmi.RemoteException;
  */
 public interface RMI extends Remote{
     public String getData(String text) throws RemoteException;
+
+    /**
+     *
+     * @return
+     */
+    public Catalog getCatalog() throws RemoteException;
 }

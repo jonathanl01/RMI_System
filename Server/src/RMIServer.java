@@ -35,6 +35,12 @@ public class RMIServer extends UnicastRemoteObject implements RMI{
             System.out.println(e);
         }
     }
+
+    @Override
+    public Catalog getCatalog() throws RemoteException {
+        Catalog list = new Catalog("Kirill", 4);
+        return list;
+    }
     
     
 }
